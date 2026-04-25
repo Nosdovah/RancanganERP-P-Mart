@@ -665,39 +665,39 @@
                             </tr>
                         </thead>
                         <tbody class="text-sm text-gray-300 divide-y divide-corporate-700">
-                            <tr class="hover:bg-corporate-700 transition">
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
                                 <td class="p-4 font-medium text-white">Pemesanan ke Distributor</td>
                                 <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)</td>
                                 <td class="p-4">Pesan via WhatsApp (Manajer) tanpa ROP.</td>
                                 <td class="p-4">Auto MRP membuat Purchase Requisition (PR) -> Purchase Order (PO).</td>
                             </tr>
-                            <tr class="hover:bg-corporate-700 transition">
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
                                 <td class="p-4 font-medium text-white">Penerimaan & Cek Barang</td>
                                 <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)</td>
                                 <td class="p-4">Cek fisik vs PO vs DO vs Invoice oleh Staff.</td>
                                 <td class="p-4">Goods Receipt (MIGO). Sistem update stok real-time berdasar PO.</td>
                             </tr>
-                            <tr class="hover:bg-corporate-700 transition bg-corporate-800/50">
+                            <tr class="hover:bg-corporate-700 transition bg-corporate-800/50 zoomable-card">
                                 <td class="p-4 font-medium text-white">Penjualan di Kasir</td>
                                 <td class="p-4 font-bold text-green-400">SD (Sales & Dist.)</td>
                                 <td class="p-4">POS lokal, memotong stok secara lokal/terbatas.</td>
                                 <td class="p-4">Integrasi POS ke SD. Auto Goods Issue memicu pengurangan di MM & jurnal
                                     di FI.</td>
                             </tr>
-                            <tr class="hover:bg-corporate-700 transition bg-corporate-800/50">
+                            <tr class="hover:bg-corporate-700 transition bg-corporate-800/50 zoomable-card">
                                 <td class="p-4 font-medium text-white">Manajemen Harga & Sewa Rak</td>
                                 <td class="p-4 font-bold text-green-400">SD (Sales & Dist.)</td>
                                 <td class="p-4">Penataan sebulan sekali, rak berbayar manual.</td>
                                 <td class="p-4">Pricing Procedure & Master Data dikelola sentral melalui SD.</td>
                             </tr>
-                            <tr class="hover:bg-corporate-700 transition">
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
                                 <td class="p-4 font-medium text-white">Pembayaran ke Pemasok</td>
                                 <td class="p-4 font-bold text-purple-400">FI (Financial Acct)</td>
                                 <td class="p-4">Wakil Manajer bayar manual dan input ke sistem.</td>
                                 <td class="p-4">Invoice Verification (MIRO). Three-way match. Pencatatan Accounts
                                     Payable.</td>
                             </tr>
-                            <tr class="hover:bg-corporate-700 transition">
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
                                 <td class="p-4 font-medium text-white">Opname & Barang Expired</td>
                                 <td class="p-4 font-bold text-purple-400">FI & MM</td>
                                 <td class="p-4">Opname tiap 3 minggu. Barang retur potong tagihan manual.</td>
@@ -849,6 +849,29 @@
             // Clean content
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = content;
+
+            // SPECIAL CASE: Table Rows
+            if (originalElement.tagName === 'TR') {
+                // Find parent table headers
+                const table = originalElement.closest('table');
+                const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.innerText);
+                const cells = Array.from(originalElement.querySelectorAll('td'));
+                
+                let html = '<div class="space-y-6">';
+                html += `<h3 class="text-3xl font-bold text-brand-600 border-b pb-4 mb-8">${cells[0].innerText}</h3>`;
+                
+                headers.forEach((header, index) => {
+                    if (index === 0) return; // Skip title as we used it as H3
+                    html += `
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-2">${header}</span>
+                            <div class="text-xl text-corporate-900">${cells[index].innerHTML}</div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+                tempDiv.innerHTML = html;
+            }
             
             // If it's a problem card, make sure the detail is visible in modal
             const flaws = tempDiv.querySelectorAll('[id^="p"], [id^="as"]');
