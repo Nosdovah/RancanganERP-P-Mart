@@ -387,7 +387,8 @@
                             1</div>
                         <div class="md:w-1/2 md:pl-8 w-full">
                             <div id="as1"
-                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner">
+                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner zoomable-card"
+                                onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Tidak ada Reorder Point (ROP). Format pesanan tidak standar. Visibilitas stok minimum
                                 bergantung pada pengecekan visual staff.
@@ -400,7 +401,8 @@
                         onclick="toggleDetail('as2')">
                         <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1 hidden md:block">
                             <div id="as2"
-                                class="hidden md:block bg-orange-50 p-4 rounded text-sm text-orange-800 border border-orange-200 shadow-inner text-right">
+                                class="hidden md:block bg-orange-50 p-4 rounded text-sm text-orange-800 border border-orange-200 shadow-inner text-right zoomable-card"
+                                onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Pengecekan 3 dokumen manual rawan human error (Miscalculation). Risiko fraud tinggi.
                             </div>
@@ -438,7 +440,8 @@
                             3</div>
                         <div class="md:w-1/2 md:pl-8 w-full">
                             <div id="as3"
-                                class="hidden md:block bg-yellow-50 p-4 rounded text-sm text-yellow-800 border border-yellow-200 shadow-inner">
+                                class="hidden md:block bg-yellow-50 p-4 rounded text-sm text-yellow-800 border border-yellow-200 shadow-inner zoomable-card"
+                                onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Input stok setelah barang datang berisiko lag data. Pembayaran tidak terintegrasi
                                 otomatis dengan mutasi inventory di sistem akuntansi.
@@ -451,7 +454,8 @@
                         onclick="toggleDetail('as4')">
                         <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1 hidden md:block">
                             <div id="as4"
-                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner text-right">
+                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner text-right zoomable-card"
+                                onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Stock opname 3 minggu sekali terlalu lama (Blind spot). Barang expired (jual
                                 putus/reverse/potong tagihan) diurus manual tanpa rekaman retur sistematis.
