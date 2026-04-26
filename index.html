@@ -219,14 +219,16 @@
                             class="text-sm font-normal text-gray-500 ml-2">Digital Blueprint</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#profil" class="text-gray-600 hover:text-brand-600 transition font-medium">Profil & Isu</a>
-                    <a href="#asis" class="text-gray-600 hover:text-brand-600 transition font-medium">Proses Saat
+                    <a href="#profil" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Profil & Isu</a>
+                    <a href="#asis" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Proses Saat
                         Ini</a>
-                    <a href="#tobe" class="text-gray-600 hover:text-brand-600 transition font-medium">Desain ERP
+                    <a href="#tobe" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Desain ERP
                         (To-Be)</a>
-                    <a href="#matrix" class="text-gray-600 hover:text-brand-600 transition font-medium">Matriks SAP</a>
-                    <a href="#impact" class="text-gray-600 hover:text-brand-600 transition font-medium">Dampak
+                    <a href="#matrix" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Matriks SAP</a>
+                    <a href="#impact" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Dampak
                         Bisnis</a>
+                    <a href="#risiko" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Risiko</a>
+                    <a href="#roadmap" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Roadmap</a>
                 </div>
             </div>
         </div>
@@ -790,6 +792,207 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Risk Analysis -->
+        <section id="risiko" class="py-16 bg-corporate-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-corporate-900">Analisis Risiko Transformasi Digital</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                        Evaluasi risiko sistematis berdasarkan pilar Balanced Scorecard (BSC) untuk meminimalkan kegagalan implementasi ERP dan kerugian investasi (sunk cost).
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 5.1 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm zoomable-card">
+                        <div class="flex items-center mb-4">
+                            <span class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl mr-4">💰</span>
+                            <h3 class="text-xl font-bold text-corporate-800">Perspektif Keuangan</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4"><strong>Hambatan Biaya & Pemilihan Arsitektur:</strong> Besarnya alokasi modal (Capital Expenditure) untuk mengimplementasikan solusi setingkat SAP sangat memberatkan arus kas minimarket dan bisa melebihi sisa dana operasional.</p>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-100 text-sm">
+                            <strong class="text-red-800 block mb-1">Strategi Mitigasi:</strong>
+                            <span class="text-gray-700">P Mart harus menghindari akuisisi solusi ERP on-premise. Inisiatif diarahkan pada solusi arsitektur berbasis cloud (SaaS) untuk menggeser biaya dari CapEx yang kaku menjadi pengeluaran operasional bulanan (OpEx) yang fleksibel.</span>
+                        </div>
+                    </div>
+                    <!-- 5.2 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm zoomable-card">
+                        <div class="flex items-center mb-4">
+                            <span class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4">👥</span>
+                            <h3 class="text-xl font-bold text-corporate-800">Perspektif Pertumbuhan & Pembelajaran</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4"><strong>Literasi Digital & Resistensi Karyawan:</strong> Karyawan yang terbiasa dengan alur kerja mekanis manual mungkin merasa terancam atau terintimidasi oleh otomasi, konsep alokasi stok sistem, dan pemindai inframerah.</p>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100 text-sm">
+                            <strong class="text-blue-800 block mb-1">Strategi Mitigasi:</strong>
+                            <span class="text-gray-700">Penerapan Change Management dengan porsi setara instalasi software. Pelatihan pengguna akhir berbasis simulasi peran (role-based simulation) dengan antarmuka berbahasa Indonesia yang intuitif sangat diwajibkan.</span>
+                        </div>
+                    </div>
+                    <!-- 5.3 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm zoomable-card">
+                        <div class="flex items-center mb-4">
+                            <span class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-xl mr-4">📊</span>
+                            <h3 class="text-xl font-bold text-corporate-800">Perspektif Proses Internal</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4"><strong>Isu Kualitas Master Data:</strong> Sistem ERP hanya mengeksekusi kesalahan dengan cepat jika master data mengandung cacat atau anomali sisa dari sistem agregator lama tanpa standardisasi.</p>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100 text-sm">
+                            <strong class="text-yellow-800 block mb-1">Strategi Mitigasi:</strong>
+                            <span class="text-gray-700">Fase karantina dan sanitasi data (data cleansing) ketat. Melakukan satu kali stock opname fisik paling akurat sebagai baseline. Penerapan tata kelola data ketat untuk mencegah modifikasi oleh staf tanpa otorisasi.</span>
+                        </div>
+                    </div>
+                    <!-- 5.4 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm zoomable-card">
+                        <div class="flex items-center mb-4">
+                            <span class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl mr-4">🌐</span>
+                            <h3 class="text-xl font-bold text-corporate-800">Perspektif Pemangku Kepentingan</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4"><strong>Stabilitas Infrastruktur Jaringan:</strong> Solusi berbasis cloud sangat bergantung pada konektivitas internet. Kelemahan infrastruktur dapat melumpuhkan sinkronisasi TLog dari POS ke modul SD.</p>
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100 text-sm">
+                            <strong class="text-purple-800 block mb-1">Strategi Mitigasi:</strong>
+                            <span class="text-gray-700">POS harus dilengkapi kapabilitas offline (caching) untuk data transaksi, yang kemudian melakukan batch sync asinkron saat daring. Mengikat kontrak SLA ketat dengan vendor integrator.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Roadmap -->
+        <section id="roadmap" class="py-16 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-corporate-900">Rekomendasi Peta Jalan Implementasi</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                        Peta jalan penerapan (implementation roadmap) berdurasi 6 bulan (24 minggu) yang mengadopsi metodologi hibrida atau paralel guna meminimalkan risiko gangguan kelangsungan bisnis.
+                    </p>
+                </div>
+                
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="absolute w-1 bg-brand-200 left-1/2 transform -translate-x-1/2 h-full top-0 hidden md:block"></div>
+                    
+                    <div class="space-y-12">
+                        <!-- Fase 1 -->
+                        <div class="relative flex flex-col md:flex-row items-center zoomable-card">
+                            <div class="md:w-1/2 md:pr-12 text-right hidden md:block">
+                                <h4 class="text-lg font-bold text-brand-700">Fase 1: Perencanaan & Pembersihan Data</h4>
+                                <p class="text-sm text-gray-500 font-semibold">Bulan 1</p>
+                            </div>
+                            <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 bg-brand-500 border-4 border-white rounded-full z-10 flex items-center justify-center text-white font-bold hidden md:flex">1</div>
+                            <div class="md:w-1/2 md:pl-12 w-full">
+                                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                                    <h4 class="text-lg font-bold text-brand-700 md:hidden mb-1">Fase 1: Perencanaan & Pembersihan (Bulan 1)</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Membangun cetak biru dan memutus keterikatan dengan data kotor masa lalu.</p>
+                                    <ul class="text-xs text-gray-600 list-disc list-inside space-y-1">
+                                        <li>Pemetaan rincian parameter distributor (Min order, lead time).</li>
+                                        <li>Eksekusi stock opname menyeluruh terakhir dengan metodologi fisik.</li>
+                                        <li>Standardisasi Master Data Material (data cleansing).</li>
+                                        <li><strong>Keluaran:</strong> Dokumen Business Blueprint.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fase 2 -->
+                        <div class="relative flex flex-col md:flex-row items-center zoomable-card">
+                            <div class="md:w-1/2 md:pr-12 w-full order-2 md:order-1">
+                                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm md:text-right">
+                                    <h4 class="text-lg font-bold text-brand-700 md:hidden mb-1">Fase 2: Konfigurasi Sistem ERP (Bulan 2-3)</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Menerjemahkan dokumen cetak biru menjadi antarmuka sistem operasional.</p>
+                                    <ul class="text-xs text-gray-600 list-disc list-inside md:list-none space-y-1">
+                                        <li>Pengaturan Parameter Safety Stock & ROP di Modul MM.</li>
+                                        <li>Konfigurasi logika SLED dan pergerakan Return to Vendor.</li>
+                                        <li>Pembuatan API khusus POS lokal dengan SAP (Modul SD).</li>
+                                        <li>Penautan fungsi matriks OBYC untuk pembukuan otomatis (Modul FI).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 bg-brand-500 border-4 border-white rounded-full z-10 flex items-center justify-center text-white font-bold hidden md:flex order-2">2</div>
+                            <div class="md:w-1/2 md:pl-12 text-left hidden md:block order-3">
+                                <h4 class="text-lg font-bold text-brand-700">Fase 2: Konfigurasi Sistem ERP & Modul</h4>
+                                <p class="text-sm text-gray-500 font-semibold">Bulan 2 - 3</p>
+                            </div>
+                        </div>
+
+                        <!-- Fase 3 -->
+                        <div class="relative flex flex-col md:flex-row items-center zoomable-card">
+                            <div class="md:w-1/2 md:pr-12 text-right hidden md:block">
+                                <h4 class="text-lg font-bold text-brand-700">Fase 3: Pengujian Integrasi & Pelatihan</h4>
+                                <p class="text-sm text-gray-500 font-semibold">Bulan 4</p>
+                            </div>
+                            <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 bg-brand-500 border-4 border-white rounded-full z-10 flex items-center justify-center text-white font-bold hidden md:flex">3</div>
+                            <div class="md:w-1/2 md:pl-12 w-full">
+                                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                                    <h4 class="text-lg font-bold text-brand-700 md:hidden mb-1">Fase 3: Pengujian & Pelatihan (Bulan 4)</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Menjamin ketahanan aplikasi dan kompetensi operasional staf.</p>
+                                    <ul class="text-xs text-gray-600 list-disc list-inside space-y-1">
+                                        <li>Eksekusi User Acceptance Testing (UAT) di ruang simulasi.</li>
+                                        <li>Simulasi skenario krisis (barang rusak, retur kedaluwarsa).</li>
+                                        <li>Pelatihan role-based intensif bagi staf gudang, kasir, dan manajer.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fase 4 -->
+                        <div class="relative flex flex-col md:flex-row items-center zoomable-card">
+                            <div class="md:w-1/2 md:pr-12 w-full order-2 md:order-1">
+                                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm md:text-right">
+                                    <h4 class="text-lg font-bold text-brand-700 md:hidden mb-1">Fase 4: Go-Live Terkendali (Bulan 5)</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Menghindari kelumpuhan total melalui peluncuran transisi yang dikontrol ketat.</p>
+                                    <ul class="text-xs text-gray-600 list-disc list-inside md:list-none space-y-1">
+                                        <li>Operasi Paralel: Sistem manual WhatsApp dan ERP berjalan bersamaan.</li>
+                                        <li>Pengawasan 2-4 minggu guna memvalidasi akurasi rekonsiliasi.</li>
+                                        <li>Izin Cutover definitif untuk menghentikan sistem lama sepenuhnya.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 bg-brand-500 border-4 border-white rounded-full z-10 flex items-center justify-center text-white font-bold hidden md:flex order-2">4</div>
+                            <div class="md:w-1/2 md:pl-12 text-left hidden md:block order-3">
+                                <h4 class="text-lg font-bold text-brand-700">Fase 4: Peluncuran Paralel & Go-Live</h4>
+                                <p class="text-sm text-gray-500 font-semibold">Bulan 5</p>
+                            </div>
+                        </div>
+
+                        <!-- Fase 5 -->
+                        <div class="relative flex flex-col md:flex-row items-center zoomable-card">
+                            <div class="md:w-1/2 md:pr-12 text-right hidden md:block">
+                                <h4 class="text-lg font-bold text-brand-700">Fase 5: Optimalisasi Berkelanjutan</h4>
+                                <p class="text-sm text-gray-500 font-semibold">Bulan 6 & Seterusnya</p>
+                            </div>
+                            <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 bg-brand-500 border-4 border-white rounded-full z-10 flex items-center justify-center text-white font-bold hidden md:flex">5</div>
+                            <div class="md:w-1/2 md:pl-12 w-full">
+                                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                                    <h4 class="text-lg font-bold text-brand-700 md:hidden mb-1">Fase 5: Optimalisasi (Bulan 6+)</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Mewujudkan Return on Investment dan menjaga reliabilitas harian.</p>
+                                    <ul class="text-xs text-gray-600 list-disc list-inside space-y-1">
+                                        <li>Pemberian Hyper-care Support untuk menyelesaikan kendala minor.</li>
+                                        <li>Evaluasi Kesuksesan KPI (zero stockout, perbaikan laporan, efisiensi waktu).</li>
+                                        <li>Pembaruan keamanan rutin layanan cloud.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Conclusion -->
+        <section id="kesimpulan" class="py-16 bg-corporate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-corporate-800 rounded-2xl p-8 md:p-12 border border-corporate-700 text-center zoomable-card shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl opacity-5">🎯</div>
+                    <div class="absolute -left-10 -bottom-10 text-9xl opacity-5">🚀</div>
+                    <h2 class="text-3xl font-bold text-brand-500 mb-6">Kesimpulan Strategis Eksekutif</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Berbagai kendala operasional yang melumpuhkan margin P Mart saat ini—seperti <strong>erosi data akibat agregator pembayaran</strong> pihak ketiga, kekosongan rak untuk produk berkecepatan tinggi, siklus pemesanan manual yang tidak terstruktur, dan proses rekonsiliasi manual yang melelahkan—adalah gejala dari kerangka operasi yang sudah ketinggalan zaman dan tidak mumpuni.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto mt-4">
+                        Dengan mengimplementasikan arsitektur sistem ERP secara disiplin selama enam bulan ke depan, P Mart akan sepenuhnya memodernisasi cara mereka beroperasi. Integrasi alur Material Management (P2P), Sales and Distribution (O2C), dan Financial Accounting (R2R) yang solid akan mengganti asumsi dengan algoritma data yang presisi tinggi, serta mengubah takdir minimarket dari sekadar ritel pasif menjadi <strong>perusahaan rantai pasok berbasis data yang sangat proaktif</strong> dan siap menghadapi tantangan perluasan jaringan pasar.
+                    </p>
                 </div>
             </div>
         </section>
