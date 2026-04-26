@@ -672,23 +672,28 @@
                         </thead>
                         <tbody class="text-sm text-gray-300 divide-y divide-corporate-700">
                             <tr class="hover:bg-corporate-700 transition zoomable-card">
-                                <td class="p-4 font-medium text-white">Pemesanan ke Distributor</td>
-                                <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)</td>
-                                <td class="p-4">Pesan via WhatsApp (Manajer) tanpa ROP.</td>
-                                <td class="p-4">Auto MRP membuat Purchase Requisition (PR) -> Purchase Order (PO).</td>
+                                <td class="p-4 font-medium text-white">Pemantauan Level Inventaris</td>
+                                <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)<br><span class="text-xs font-normal text-gray-400">MRP</span></td>
+                                <td class="p-4">Staf berkeliling lorong secara visual untuk mendeteksi rak yang kosong pada produk vital seperti susu dan air mineral.</td>
+                                <td class="p-4">Mesin sistem memonitor level stok secara terus-menerus dan membandingkannya dengan Master Data Reorder Point, mengeliminasi kesalahan manusia dan mencegah fenomena stockout.</td>
                             </tr>
                             <tr class="hover:bg-corporate-700 transition zoomable-card">
-                                <td class="p-4 font-medium text-white">Penerimaan & Cek Barang</td>
-                                <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)</td>
-                                <td class="p-4">Cek fisik vs PO vs DO vs Invoice oleh Staff.</td>
-                                <td class="p-4">Goods Receipt (MIGO). Sistem update stok real-time berdasar PO.</td>
+                                <td class="p-4 font-medium text-white">Pembuatan Pesanan Barang (Pengadaan)</td>
+                                <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)<br><span class="text-xs font-normal text-gray-400">PR to PO</span></td>
+                                <td class="p-4">Manajer menghubungi tenaga penjual pemasok melalui aplikasi WhatsApp tanpa adanya pencatatan formal yang terintegrasi.</td>
+                                <td class="p-4">Sistem secara otomatis mengubah PR menjadi PO berformat standar yang dikirim melalui jalur EDI. Menciptakan komitmen inventaris digital yang transparan dan dapat dilacak (traceable).</td>
+                            </tr>
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
+                                <td class="p-4 font-medium text-white">Penerimaan Barang Fisik Logistik</td>
+                                <td class="p-4 font-bold text-blue-400">MM (Material Mgmt)<br><span class="text-xs font-normal text-gray-400">MIGO</span></td>
+                                <td class="p-4">Staf menghitung karton dan sekadar mencoret item pada checklist kertas jika ada selisih atau barang rusak.</td>
+                                <td class="p-4">Proses pemindaian kode batang mencatat penerimaan barang aktual terhadap PO. Inventaris diperbarui secara real-time dan mencatat selisih (variance) secara akurat ke dalam pembukuan.</td>
                             </tr>
                             <tr class="hover:bg-corporate-700 transition bg-corporate-800/50 zoomable-card">
-                                <td class="p-4 font-medium text-white">Penjualan di Kasir</td>
-                                <td class="p-4 font-bold text-green-400">SD (Sales & Dist.)</td>
-                                <td class="p-4">POS lokal, memotong stok secara lokal/terbatas.</td>
-                                <td class="p-4">Integrasi POS ke SD. Auto Goods Issue memicu pengurangan di MM & jurnal
-                                    di FI.</td>
+                                <td class="p-4 font-medium text-white">Pemrosesan Transaksi Penjualan (Kasir)</td>
+                                <td class="p-4 font-bold text-green-400">SD (Sales & Dist.)<br><span class="text-xs font-normal text-gray-400">POS Inbound</span></td>
+                                <td class="p-4">Sistem POS mengeksekusi penjualan, tetapi agregator pembayaran pihak ketiga sering menyebabkan kesalahan perhitungan stok akhir.</td>
+                                <td class="p-4">TLog dari POS secara sepihak memicu Goods Issue di dalam modul SD tanpa campur tangan agregator. Menghilangkan bug kesalahan stok dan memastikan rekonsiliasi yang sempurna.</td>
                             </tr>
                             <tr class="hover:bg-corporate-700 transition bg-corporate-800/50 zoomable-card">
                                 <td class="p-4 font-medium text-white">Manajemen Harga & Sewa Rak</td>
@@ -697,18 +702,22 @@
                                 <td class="p-4">Pricing Procedure & Master Data dikelola sentral melalui SD.</td>
                             </tr>
                             <tr class="hover:bg-corporate-700 transition zoomable-card">
-                                <td class="p-4 font-medium text-white">Pembayaran ke Pemasok</td>
-                                <td class="p-4 font-bold text-purple-400">FI (Financial Acct)</td>
-                                <td class="p-4">Wakil Manajer bayar manual dan input ke sistem.</td>
-                                <td class="p-4">Invoice Verification (MIRO). Three-way match. Pencatatan Accounts
-                                    Payable.</td>
+                                <td class="p-4 font-medium text-white">Penyelesaian Kewajiban Finansial</td>
+                                <td class="p-4 font-bold text-purple-400">FI (Financial Acct)<br><span class="text-xs font-normal text-gray-400">MIRO</span></td>
+                                <td class="p-4">Wakil Manajer memproses pembayaran kepada pemasok secara manual berdasarkan tumpukan faktur fisik dari staf.</td>
+                                <td class="p-4">Sistem menjalankan Three-Way Matching antara PO, Goods Receipt, dan Invoice. Pembayaran dijadwalkan dan diotorisasi secara otomatis untuk mencegah keterlambatan atau duplikasi bayar.</td>
                             </tr>
                             <tr class="hover:bg-corporate-700 transition zoomable-card">
-                                <td class="p-4 font-medium text-white">Opname & Barang Expired</td>
-                                <td class="p-4 font-bold text-purple-400">FI & MM</td>
-                                <td class="p-4">Opname tiap 3 minggu. Barang retur potong tagihan manual.</td>
-                                <td class="p-4">Perpetual Inventory. Retur memicu memo kredit FI & pembaruan valuasi
-                                    stok.</td>
+                                <td class="p-4 font-medium text-white">Penanganan Retur & Barang Kedaluwarsa</td>
+                                <td class="p-4 font-bold text-purple-400">MM & FI<br><span class="text-xs font-normal text-gray-400">SLED & Return</span></td>
+                                <td class="p-4">Penyortiran manual ke rak khusus; penyelesaian 'potong tagihan' mengandalkan memori dan kesepakatan verbal.</td>
+                                <td class="p-4">Sistem memberikan peringatan batas usia simpan produk. Eksekusi pengembalian barang di MM akan otomatis menerbitkan Credit Memo di FI, memotong utang pemasok secara presisi.</td>
+                            </tr>
+                            <tr class="hover:bg-corporate-700 transition zoomable-card">
+                                <td class="p-4 font-medium text-white">Rekonsiliasi Buku Besar & Audit</td>
+                                <td class="p-4 font-bold text-purple-400">FI (Financial Acct)<br><span class="text-xs font-normal text-gray-400">OBYC</span></td>
+                                <td class="p-4">Staf melakukan ritual stock opname fisik secara menyeluruh setiap tiga minggu sekali.</td>
+                                <td class="p-4">Setiap aktivitas inventaris langsung di-posting ke Buku Besar (General Ledger). Kondisi laporan keuangan selalu up-to-date, memungkinkan pengurangan frekuensi stock opname drastis.</td>
                             </tr>
                         </tbody>
                     </table>
