@@ -1002,13 +1002,28 @@
                 <div class="bg-corporate-800 rounded-2xl p-8 md:p-12 border border-corporate-700 text-center zoomable-card shadow-2xl relative overflow-hidden">
                     <div class="absolute -right-10 -top-10 text-9xl opacity-5">🎯</div>
                     <div class="absolute -left-10 -bottom-10 text-9xl opacity-5">🚀</div>
-                    <h2 class="text-3xl font-bold text-brand-500 mb-6">Kesimpulan Strategis Eksekutif</h2>
-                    <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                        Berbagai kendala operasional yang melumpuhkan margin P Mart saat ini—seperti <strong>erosi data akibat agregator pembayaran</strong> pihak ketiga, kekosongan rak untuk produk berkecepatan tinggi, siklus pemesanan manual yang tidak terstruktur, dan proses rekonsiliasi manual yang melelahkan—adalah gejala dari kerangka operasi yang sudah ketinggalan zaman dan tidak mumpuni.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto mt-4">
-                        Dengan mengimplementasikan arsitektur sistem ERP secara disiplin selama enam bulan ke depan, P Mart akan sepenuhnya memodernisasi cara mereka beroperasi. Integrasi alur Material Management (P2P), Sales and Distribution (O2C), dan Financial Accounting (R2R) yang solid akan mengganti asumsi dengan algoritma data yang presisi tinggi, serta mengubah takdir minimarket dari sekadar ritel pasif menjadi <strong>perusahaan rantai pasok berbasis data yang sangat proaktif</strong> dan siap menghadapi tantangan perluasan jaringan pasar.
-                    </p>
+                    <h2 class="text-3xl font-bold text-brand-500 mb-8">Kesimpulan Strategis Eksekutif</h2>
+                    
+                    <ul class="text-left max-w-4xl mx-auto space-y-6">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-corporate-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1 shadow-lg">1</span>
+                            <p class="text-lg text-gray-200 leading-relaxed">
+                                Berbagai kendala operasional yang melumpuhkan margin P Mart saat ini—seperti <strong>erosi data akibat agregator pembayaran</strong> pihak ketiga, kekosongan rak produk vital, dan siklus pemesanan manual—adalah gejala dari kerangka operasi yang sudah usang dan tidak mumpuni.
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-corporate-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1 shadow-lg">2</span>
+                            <p class="text-lg text-gray-200 leading-relaxed">
+                                Dengan mengadopsi arsitektur ERP secara disiplin (MM, SD, FI), P Mart akan mengganti asumsi subjektif dengan <strong>algoritma data yang presisi tinggi</strong>, mengeliminasi kebocoran finansial, serta menjamin ketersediaan barang secara proaktif.
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-corporate-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1 shadow-lg">3</span>
+                            <p class="text-lg text-gray-200 leading-relaxed">
+                                Transformasi digital ini akan mengubah takdir P Mart dari sekadar ritel pasif menjadi <strong>perusahaan rantai pasok berbasis data</strong> yang tangguh dan siap menghadapi tantangan perluasan jaringan pasar di masa depan.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1120,11 +1135,21 @@
                 h.classList.add('text-3xl', 'mb-6');
                 h.classList.remove('text-sm', 'text-lg', 'text-base');
             });
-            modalBody.querySelectorAll('p, li').forEach(p => {
+            modalBody.querySelectorAll('p, li, span, td, h4, h3, h2').forEach(p => {
                 p.classList.add('text-xl', 'leading-relaxed');
-                p.classList.remove('text-xs', 'text-sm');
+                p.classList.remove('text-xs', 'text-sm', 'text-gray-300', 'text-gray-400', 'text-gray-200', 'text-white', 'text-brand-100');
+                if (!p.classList.contains('text-brand-600') && !p.classList.contains('text-red-600')) {
+                    p.classList.add('text-corporate-900');
+                }
             });
-            modalBody.querySelectorAll('.text-3xl').forEach(icon => icon.classList.replace('text-3xl', 'text-6xl'));
+            modalBody.querySelectorAll('.text-3xl').forEach(icon => {
+                if (icon.classList.contains('text-brand-500') || icon.classList.contains('text-brand-400')) {
+                    icon.classList.replace('text-3xl', 'text-6xl');
+                } else {
+                    icon.classList.replace('text-3xl', 'text-6xl');
+                    icon.classList.add('text-corporate-900');
+                }
+            });
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scroll
