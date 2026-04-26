@@ -270,9 +270,45 @@
                         pengadaan melalui integrasi modul Material Management (MM), Sales & Distribution (SD), dan
                         Financial Accounting (FI).
                     </p>
-                    <div class="flex items-center text-sm text-gray-400 space-x-4">
+                    <div class="flex items-center text-sm text-gray-400 space-x-4 mb-8">
                         <span class="flex items-center"><span>📍</span> RT.06/RW.04, Baranangsiang, Bogor</span>
                         <span class="flex items-center"><span>🏢</span> Sektor: Retail Minimarket</span>
+                    </div>
+
+                    <button onclick="openZoom(document.getElementById('member-list').innerHTML, this)" 
+                        class="group bg-brand-500 hover:bg-brand-400 text-corporate-900 font-bold py-3 px-6 rounded-lg transition shadow-xl flex items-center animate-bounce-subtle">
+                        <span class="text-xl group-hover:scale-125 transition">👥</span> 
+                        <span class="ml-3">Daftar Anggota Kelompok 3</span>
+                    </button>
+
+                    <!-- Hidden Member List Content for Modal -->
+                    <div id="member-list" class="hidden">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-corporate-900 mb-2">Anggota Proyek</h3>
+                            <p class="text-gray-500">Kelompok 3 - Kelas 4D</p>
+                        </div>
+                        <div class="space-y-4 max-w-md mx-auto">
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center hover:bg-white transition hover:shadow-md">
+                                <span class="font-bold text-corporate-800">1. Felicia Dewi Harjono</span>
+                                <span class="text-brand-600 font-mono text-sm">023124013</span>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center hover:bg-white transition hover:shadow-md">
+                                <span class="font-bold text-corporate-800">2. Dito Ibrahim</span>
+                                <span class="text-brand-600 font-mono text-sm">023124067</span>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center hover:bg-white transition hover:shadow-md">
+                                <span class="font-bold text-corporate-800">3. Salma Jazmin</span>
+                                <span class="text-brand-600 font-mono text-sm">023124075</span>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center hover:bg-white transition hover:shadow-md">
+                                <span class="font-bold text-corporate-800">4. Syakila Desti Perianto</span>
+                                <span class="text-brand-600 font-mono text-sm">023124084</span>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center hover:bg-white transition hover:shadow-md">
+                                <span class="font-bold text-corporate-800">5. Raihan Hanif Firdaus</span>
+                                <span class="text-brand-600 font-mono text-sm">023124157</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hidden md:flex md:w-1/3 justify-end">
@@ -1455,6 +1491,13 @@
             @keyframes fadeIn {
                 from { opacity: 0; transform: translateY(5px); }
                 to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes bounce-subtle {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-5px); }
+            }
+            .animate-bounce-subtle {
+                animation: bounce-subtle 2s infinite ease-in-out;
             }
             .no-scrollbar::-webkit-scrollbar {
                 display: none;
