@@ -212,23 +212,21 @@
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold text-brand-600 tracking-tighter">P<span
+            <div class="flex flex-col md:flex-row justify-between items-center py-2 md:py-0 md:h-16">
+                <div class="flex items-center mb-2 md:mb-0">
+                    <span class="text-xl md:text-2xl font-bold text-brand-600 tracking-tighter whitespace-nowrap">P<span
                             class="text-corporate-900">MART</span> <span
-                            class="text-sm font-normal text-gray-500 ml-2">Digital Blueprint</span></span>
+                            class="text-sm font-normal text-gray-500 ml-2 hidden sm:inline">Digital Blueprint</span></span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#profil" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Profil & Isu</a>
-                    <a href="#asis" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Proses Saat
-                        Ini</a>
-                    <a href="#tobe" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Desain ERP
-                        (To-Be)</a>
-                    <a href="#matrix" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Matriks SAP</a>
-                    <a href="#impact" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Dampak
-                        Bisnis</a>
-                    <a href="#risiko" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Risiko</a>
-                    <a href="#roadmap" class="text-gray-600 hover:text-brand-600 transition font-medium text-sm lg:text-base">Roadmap</a>
+                <!-- Scrollable Navbar on Mobile -->
+                <div class="flex items-center space-x-6 md:space-x-8 overflow-x-auto w-full md:w-auto no-scrollbar pb-2 md:pb-0 px-2">
+                    <a href="#profil" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Profil & Isu</a>
+                    <a href="#asis" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">As-Is Flow</a>
+                    <a href="#tobe" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">To-Be SAP</a>
+                    <a href="#matrix" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Matriks SAP</a>
+                    <a href="#impact" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Dampak Bisnis</a>
+                    <a href="#risiko" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Risiko</a>
+                    <a href="#roadmap" class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Roadmap</a>
                 </div>
             </div>
         </div>
@@ -408,9 +406,9 @@
                     <!-- Step 2: Receiving -->
                     <div class="relative flex flex-col md:flex-row items-center mb-12 flow-node cursor-pointer group"
                         onclick="toggleDetail('as2')">
-                        <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1 hidden md:block">
+                        <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1">
                             <div id="as2"
-                                class="hidden md:block bg-orange-50 p-4 rounded text-sm text-orange-800 border border-orange-200 shadow-inner text-right zoomable-card"
+                                class="hidden md:block bg-orange-50 p-4 rounded text-sm text-orange-800 border border-orange-200 shadow-inner md:text-right zoomable-card"
                                 onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Pengecekan 3 dokumen manual rawan human error (Miscalculation). Risiko fraud tinggi.
@@ -461,9 +459,9 @@
                     <!-- Step 4: Sales & Opname -->
                     <div class="relative flex flex-col md:flex-row items-center flow-node cursor-pointer group"
                         onclick="toggleDetail('as4')">
-                        <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1 hidden md:block">
+                        <div class="md:w-1/2 md:pr-8 w-full order-3 md:order-1">
                             <div id="as4"
-                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner text-right zoomable-card"
+                                class="hidden md:block bg-red-50 p-4 rounded text-sm text-red-800 border border-red-200 shadow-inner md:text-right zoomable-card"
                                 onclick="event.stopPropagation()">
                                 <strong class="block mb-1">Poin Lemah (Flaw):</strong>
                                 Stock opname 3 minggu sekali terlalu lama (Blind spot). Barang expired (jual
@@ -1328,6 +1326,13 @@
             @keyframes fadeIn {
                 from { opacity: 0; transform: translateY(5px); }
                 to { opacity: 1; transform: translateY(0); }
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
             }
         `;
         document.head.appendChild(style);
