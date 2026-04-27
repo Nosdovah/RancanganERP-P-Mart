@@ -189,6 +189,14 @@
             color: #0f172a;
             transform: rotate(90deg);
         }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
@@ -228,26 +236,30 @@
                 </div>
                 <!-- Scrollable Navbar on Mobile -->
                 <div
-                    class="flex items-center space-x-6 md:space-x-8 overflow-x-auto w-full md:w-auto no-scrollbar pb-2 md:pb-0 px-2">
+                    class="flex items-center flex-nowrap space-x-6 md:space-x-8 overflow-x-auto w-full md:w-auto no-scrollbar pb-2 md:pb-0 px-2">
                     <a href="#profil"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Profil
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">Profil
                         & Isu</a>
                     <a href="#asis"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">As-Is
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">As-Is
                         Flow</a>
                     <a href="#tobe"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">To-Be
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">To-Be
                         SAP</a>
                     <a href="#matrix"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Matriks
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">Matriks
                         SAP</a>
                     <a href="#impact"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Dampak
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">Dampak
                         Bisnis</a>
                     <a href="#risiko"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Risiko</a>
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">Risiko</a>
                     <a href="#roadmap"
-                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap">Roadmap</a>
+                        class="text-gray-600 hover:text-brand-600 transition font-medium text-xs lg:text-base whitespace-nowrap shrink-0">Roadmap</a>
+                    <a href="https://erp-dashboard-sample.vercel.app" target="_blank"
+                        class="bg-brand-600 text-white px-3 py-1.5 rounded-lg hover:bg-brand-500 transition font-bold text-xs lg:text-sm whitespace-nowrap flex items-center shrink-0">
+                        <span class="mr-1">📊</span> Live Demo
+                    </a>
                 </div>
             </div>
         </div>
